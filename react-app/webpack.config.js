@@ -7,6 +7,7 @@ module.exports = {
   },
   devServer: {
     port: 3000,
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -15,6 +16,8 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
+          "side-effect": false,
+
           // below syntax is for babel 6
           options: {
             presets: ["@babel/preset-env"],
