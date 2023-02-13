@@ -16,7 +16,7 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
-          "side-effect": false,
+          // "side-effect": false,
 
           // below syntax is for babel 6
           options: {
@@ -31,10 +31,10 @@ module.exports = {
           // }
         },
       },
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
+      // {
+      //   test: /\.css$/i,
+      //   use: ["style-loader", "css-loader"],
+      // },
     ],
   },
 };
